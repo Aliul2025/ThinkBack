@@ -1,0 +1,8 @@
+{
+  "name": "Copy of ThinkBack AI Assistant",
+  "description": "A calm and premium AI note-taking memory assistant that helps you capture ideas, voice notes, and scans with automated AI summaries.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

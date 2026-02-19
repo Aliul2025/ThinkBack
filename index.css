@@ -1,0 +1,112 @@
+/* Global Base Styles */
+body {
+    font-family: 'Public Sans', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    overscroll-behavior-y: contain;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Smooth Theme Transition for all elements */
+*, *::before, *::after {
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Material Symbols Fill State */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.fill-1 {
+    font-variation-settings: 'FILL' 1 !important;
+}
+
+/* Custom Scrollbar Handling */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Selection Color */
+::selection {
+    background-color: rgba(236, 91, 19, 0.2);
+    color: #ec5b13;
+}
+
+/* Premium Animation Utilities */
+.animate-in {
+    animation-duration: 400ms;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    animation-fill-mode: forwards;
+}
+
+.fade-in {
+    animation-name: fadeIn;
+}
+
+.slide-in-from-bottom {
+    animation-name: slideInFromBottom;
+}
+
+.slide-in-from-right {
+    animation-name: slideInFromRight;
+}
+
+.slide-in-from-top-2 {
+    animation-name: slideInFromTop;
+}
+
+.slide-in-from-right-8 {
+    animation-name: slideInFromRight8;
+}
+
+.zoom-in {
+    animation-name: zoomIn;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInFromBottom {
+    from { transform: translateY(100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInFromRight {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slideInFromRight8 {
+    from { transform: translateX(2rem); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInFromTop {
+    from { transform: translateY(-0.5rem); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Button Active States for Haptic Feel */
+button:active {
+    transform: scale(0.97);
+    transition: transform 0.1s ease;
+}
+
+/* Safe Area Handling for Mobile Browsers */
+.pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+}
